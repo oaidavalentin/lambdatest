@@ -76,8 +76,8 @@ public class SimpleFormTests extends BasePage {
     @Test
     public void addTwoNumbersAndGetTheirSum(){
         driver.findElement(simpleFormDemoLink).click();
-        simpleFormDemo.textField1("1");
-        simpleFormDemo.textField2("0");
+        simpleFormDemo.EnterTheFirstValue("1");
+        simpleFormDemo.EnterTheSecondValue("0");
         simpleFormDemo.clickOnGetSum();
         String actualResult = driver.findElement(By.id("addmessage")).getText();
         Assert.assertTrue(actualResult.contains("1"));
@@ -86,8 +86,8 @@ public class SimpleFormTests extends BasePage {
     @Test
     public void addTwoNumbersAndGetTheirSum2(){
         driver.findElement(simpleFormDemoLink).click();
-        simpleFormDemo.textField1("");
-        simpleFormDemo.textField2("");
+        simpleFormDemo.EnterTheFirstValue("");
+        simpleFormDemo.EnterTheSecondValue("");
         simpleFormDemo.clickOnGetSum();
         String actualResult = driver.findElement(By.id("addmessage")).getText();
         Assert.assertTrue(actualResult.contains("Entered value is not a number"));
@@ -95,8 +95,8 @@ public class SimpleFormTests extends BasePage {
     @Test
     public void addTwoNumbersAndGetTheirSum3(){
         driver.findElement(simpleFormDemoLink).click();
-        simpleFormDemo.textField1("1");
-        simpleFormDemo.textField2("1");
+        simpleFormDemo.EnterTheFirstValue("1");
+        simpleFormDemo.EnterTheSecondValue("1");
         simpleFormDemo.clickOnGetSum();
         String actualResult = driver.findElement(By.id("addmessage")).getText();
         Assert.assertTrue(actualResult.contains("2"));
@@ -104,8 +104,8 @@ public class SimpleFormTests extends BasePage {
     @Test
     public void addTwoNumbersAndGetTheirSum4(){
         driver.findElement(simpleFormDemoLink).click();
-        simpleFormDemo.textField1("0");
-        simpleFormDemo.textField2("1");
+        simpleFormDemo.EnterTheFirstValue("0");
+        simpleFormDemo.EnterTheSecondValue("1");
 
         simpleFormDemo.clickOnGetSum();
         String actualResult = driver.findElement(By.id("addmessage")).getText();

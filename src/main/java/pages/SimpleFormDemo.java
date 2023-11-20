@@ -30,19 +30,19 @@ public class SimpleFormDemo extends BasePage {
     private WebElement checkMessage;
 
     @FindBy(css ="input[placeholder='Please enter first value']")
-    private WebElement textField1;
+    private WebElement firstvalue;
 
-    public void textField1(String A)
+    public void EnterTheFirstValue(String A)
     {
-        textField1.sendKeys(A);
+        firstvalue.sendKeys(A);
     }
 
     @FindBy(css ="input[placeholder='Please enter second value']")
-    private WebElement textField2;
+    private WebElement secondvalue;
 
-    public void textField2(String B)
+    public void EnterTheSecondValue(String B)
     {
-        textField2.sendKeys(B);
+        secondvalue.sendKeys(B);
     }
 
     @FindBy(xpath = "//*[@id=\"gettotal\"]/button")
