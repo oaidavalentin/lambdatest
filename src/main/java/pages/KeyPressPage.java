@@ -69,5 +69,11 @@ import org.openqa.selenium.support.PageFactory;
             Actions action = new Actions(driver);
             action.keyDown(Keys.BACK_SPACE).perform();
         }
+        public void typeInEscapeKey()
+        {
+            textField.click();
+            Actions action = new Actions(driver);
+            action.keyDown(Keys.ESCAPE).perform();
+        }
 
     }

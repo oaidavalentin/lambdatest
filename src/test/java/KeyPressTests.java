@@ -124,6 +124,17 @@ public class KeyPressTests extends BasePage {
 
     }
 
+    @Test
+    public void TypeEscapeKeyAndCheckTheResponse() {
+        driver.findElement(KeyPressPageLink).click();
+        KeyPressPage.typeInEscapeKey();
+        String actualResult = driver.findElement(By.id("result")).getText();
+        System.out.println(actualResult);
+        Assert.assertEquals(actualResult, "You entered: ESCAPE");
+
+
+    }
+
 
 
 
