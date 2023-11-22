@@ -135,6 +135,16 @@ public class KeyPressTests extends BasePage {
 
     }
 
+    @Test
+    public void TypeUpKeyAndCheckTheResponse() {
+        driver.findElement(KeyPressPageLink).click();
+        KeyPressPage.typeInUpKey();
+        String actualResult = driver.findElement(By.id("result")).getText();
+        System.out.println(actualResult);
+        Assert.assertEquals(actualResult, "You entered: UP");
+
+
+    }
 
 
 

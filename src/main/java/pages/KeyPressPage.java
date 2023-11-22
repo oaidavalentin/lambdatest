@@ -75,5 +75,11 @@ import org.openqa.selenium.support.PageFactory;
             Actions action = new Actions(driver);
             action.keyDown(Keys.ESCAPE).perform();
         }
+        public void typeInUpKey()
+        {
+            textField.click();
+            Actions action = new Actions(driver);
+            action.keyDown(Keys.UP).perform();
+        }
 
     }
