@@ -27,5 +27,22 @@ import org.openqa.selenium.support.PageFactory;
                 Actions action = new Actions(driver);
                 action.keyDown(Keys.SHIFT).perform();
             }
-
+        public void typeInControlKey()
+        {
+            textField.click();
+            Actions action = new Actions(driver);
+            action.keyDown(Keys.CONTROL).perform();
+        }
+        public void typeInEnterKey()
+        {
+            textField.click();
+            Actions action = new Actions(driver);
+            action.keyDown(Keys.ENTER).perform();
+        }
+        public void typeInAltKey()
+        {
+            textField.click();
+            Actions action = new Actions(driver);
+            action.keyDown(Keys.ALT).perform();
+        }
     }

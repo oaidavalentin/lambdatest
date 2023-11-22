@@ -20,7 +20,7 @@ public class KeyPressTests extends BasePage {
 
     @Test
 
-    public void FirstTestOfKeyPressPage() {
+    public void WriteATestAndCheckTheResponse() {
         driver.findElement(KeyPressPageLink).click();
         KeyPressPage.typeInTheTextField("C");
         String actualResult = driver.findElement(By.id("result")).getText();
@@ -29,6 +29,59 @@ public class KeyPressTests extends BasePage {
 
 
     }
+    @Test
+
+    public void TypeSpaceAndCheckTheResponse() {
+        driver.findElement(KeyPressPageLink).click();
+        KeyPressPage.typeInTheTextField(" ");
+        String actualResult = driver.findElement(By.id("result")).getText();
+        System.out.println(actualResult);
+        Assert.assertEquals(actualResult, "You entered: SPACE");
+
+
+    }
+    @Test
+    public void TypeShiftKeyAndCheckTheResponse() {
+        driver.findElement(KeyPressPageLink).click();
+        KeyPressPage.typeInShiftKey();
+        String actualResult = driver.findElement(By.id("result")).getText();
+        System.out.println(actualResult);
+        Assert.assertEquals(actualResult, "You entered: SHIFT");
+
+
+    }
+    @Test
+    public void TypeControlKeyAndCheckTheResponse() {
+        driver.findElement(KeyPressPageLink).click();
+        KeyPressPage.typeInControlKey();
+        String actualResult = driver.findElement(By.id("result")).getText();
+        System.out.println(actualResult);
+        Assert.assertEquals(actualResult, "You entered: CONTROL");
+
+
+    }
+    @Test
+    public void TypeEnterKeyAndCheckTheResponse() {
+        driver.findElement(KeyPressPageLink).click();
+        KeyPressPage.typeInEnterKey();
+        String actualResult = driver.findElement(By.id("result")).getText();
+        System.out.println(actualResult);
+        Assert.assertEquals(actualResult, "You entered: ENTER");
+
+
+    }
+
+    @Test
+    public void TypeAltKeyAndCheckTheResponse() {
+        driver.findElement(KeyPressPageLink).click();
+        KeyPressPage.typeInAltKey();
+        String actualResult = driver.findElement(By.id("result")).getText();
+        System.out.println(actualResult);
+        Assert.assertEquals(actualResult, "You entered: ALT");
+
+
+    }
+
 
 
 }
