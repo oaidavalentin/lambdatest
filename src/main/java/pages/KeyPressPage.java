@@ -45,4 +45,29 @@ import org.openqa.selenium.support.PageFactory;
             Actions action = new Actions(driver);
             action.keyDown(Keys.ALT).perform();
         }
+        public void typeInTabKey()
+        {
+            textField.click();
+            Actions action = new Actions(driver);
+            action.keyDown(Keys.TAB).perform();
+        }
+        public void typeInDeleteKey()
+        {
+            textField.click();
+            Actions action = new Actions(driver);
+            action.keyDown(Keys.DELETE).perform();
+        }
+        public void typeInInsertKey()
+        {
+            textField.click();
+            Actions action = new Actions(driver);
+            action.keyDown(Keys.INSERT).perform();
+        }
+        public void typeInBackspaceKey()
+        {
+            textField.click();
+            Actions action = new Actions(driver);
+            action.keyDown(Keys.BACK_SPACE).perform();
+        }
+
     }

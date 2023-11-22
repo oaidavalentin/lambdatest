@@ -82,6 +82,49 @@ public class KeyPressTests extends BasePage {
 
     }
 
+    @Test
+    public void TypeTabKeyAndCheckTheResponse() {
+        driver.findElement(KeyPressPageLink).click();
+        KeyPressPage.typeInTabKey();
+        String actualResult = driver.findElement(By.id("result")).getText();
+        System.out.println(actualResult);
+        Assert.assertEquals(actualResult, "You entered: TAB");
+
+
+    }
+    @Test
+    public void TypeDelKeyAndCheckTheResponse() {
+        driver.findElement(KeyPressPageLink).click();
+        KeyPressPage.typeInDeleteKey();
+        String actualResult = driver.findElement(By.id("result")).getText();
+        System.out.println(actualResult);
+        Assert.assertEquals(actualResult, "You entered: DELETE");
+
+
+    }
+    @Test
+    public void TypeInsertKeyAndCheckTheResponse() {
+        driver.findElement(KeyPressPageLink).click();
+        KeyPressPage.typeInInsertKey();
+        String actualResult = driver.findElement(By.id("result")).getText();
+        System.out.println(actualResult);
+        Assert.assertEquals(actualResult, "You entered: INSERT");
+
+
+    }
+
+    @Test
+    public void TypeBackspaceKeyAndCheckTheResponse() {
+        driver.findElement(KeyPressPageLink).click();
+        KeyPressPage.typeInBackspaceKey();
+        String actualResult = driver.findElement(By.id("result")).getText();
+        System.out.println(actualResult);
+        Assert.assertEquals(actualResult, "You entered: BACK_SPACE");
+
+
+    }
+
+
 
 
 }
